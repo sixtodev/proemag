@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verduras Selladas al Vacío | Region de Magallanes, Punta Arenas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+</head>
+<body >
+    <header class="container">
+        <button class="hamburger" id="hamburger">
+            &#9776;
+        </button>
+        <nav id="sidebar" class="sidebar">
+            
+                <li><a  href="index.html" data-page="index">INICIO</a></li>
+                <li><a  href="servicios.html" data-page="servicios">SERVICIOS</a></li>
+                <li><a  href="clientes.html"data-page="clientes">CLIENTES</a></li>
+                <li><a  href="galeria.html"data-page="galeria">GALERIA</a></li>
+                <li><a   href="visitanos.html"data-page="visitanos">VISITANOS</a></li>
+           
+            
+        </nav>
+        <div>
+        <img class="logo-hoja" src="img/hoja.webp" alt="logo hoja" width="14px" height="19px">
+    </div>
+    </header>
+    <main class="container">
+        <section>
+            
+            <div class="visitanos-container">
+          
+         
+          
+                <div class="ubicacion">
+                    <div class="ubicacion__container__titulo"> <h2>VISITANOS</h2></div>
+                   
+                   <div class="ubicacion__container__direccion">
+                     <h2 class="ubicacion__titulo">PROEMAG</h2>
+                    <h3 class="ubicacion__text">Ubicación</h3>
+                    <p class="ubicacion__parrafo"> Fresca #536, Punta Arenas, Chile</p>
+                    <h3 class="ubicacion__text">Horario</h3>
+                    <p class="ubicacion__parrafo">Lunes a Viernes de 9:00 a 18:00 hrs</p>
+                    <h3 class="ubicacion__text">Telefono</h3>
+                    <p class="ubicacion__parrafo">+56 984211546 </p> </div>
+                    
+                   
+                </div>
+            
+                <form  id="contactForm" action="https://api.staticforms.xyz/submit" method="post" class="form" >
+                    <input type="hidden" name="accessKey" value="ab4c5133-2466-459e-8612-d098ce9ad2dd">
+                    <div class="form__inputs">
+                        <label  class="form__label">
+                            <input type="text" id="name" name="name" placeholder=" " class="form__input">
+                            <span class="form__text">Ingresa tu nombre</span>
+                        </label>
+                        <label  class="form__label">
+                            <input type="email"  id="email" name="email"  placeholder=" " class="form__input">
+                            <span class="form__text">Ingresa tu Email</span>
+                        </label>
+                        <label  class="form__label">
+                            <input type="text" id="subject" name="subject" placeholder=" " class="form__input">
+                            <span class="form__text">Asunto</span>
+                        </label>
+                        <label  class="form__label">
+                            <textarea placeholder=" " id="message" name="message" class="form__input"></textarea>
+                            <span class="form__text">Mensaje</span>
+                        </label>
+                    </div>
+                    <input type="text" name="honeypot" style="display: none;"> <!-- Optional -->
+                    <input type="hidden" name="redirectTo" value="http://192.168.146.1:5500/gracias.html"> 
+                       <input type="submit" value="Enviar">
+
+                    <p id="error-message" style="display: none; color: red; text-align: center;">Debe rellenar todos los campos correctamente.</p>
+                </form>
+
+           
+          
+        </div>
+                </section>
+                <section>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2392.8638342668246!2d-70.93846448698609!3d-53.14853825484464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdb26499d9f23247%3A0xbe6e103007b63147!2sCalle%20Colonia%20-%20Agua%20Fresca%20536%2C%206212133%20Punta%20Arenas%2C%20Magallanes%20y%20la%20Ant%C3%A1rtica%20Chilena%2C%20Chile!5e0!3m2!1sen!2sca!4v1716777242151!5m2!1sen!2sca" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" sandbox="" allow=“geolocation”></iframe>
+                    </div>
+                </section>    
+    </main>
+    <footer id="contenido" class="container-footer">
+        <p class="footer-p">© 2024  Procesadora de Alimentos Proemag Spa , Punta Arenas , Chile</p>
+            
+        <div class="social-icon">
+           <a href="https://www.facebook.com/profile.php?id=100009056538488&fref=ts" target="_blank"> <img src="img/icon/facebook.png" alt="facebook" width="27" height="27"></a>
+            <a href="mailto:proemagspa@gmail.com" target="_blank"><img src="img/icon/social.png" alt="gmail" width="27" height="27"></a>
+        </div>
+   
+    <footer>
+       <script src="validacion.js"></script>
+       <script src="nav-mobile.js"></script>
+</body>
+</html>

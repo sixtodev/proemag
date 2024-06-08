@@ -1,0 +1,999 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/background.jpg');
+    background-position: center; /* Para centrar la imagen */
+    background-repeat: no-repeat; /* Para que la imagen no se repita */
+    background-size: cover; /* Para que la imagen ocupe todo el espacio y se adapte */
+    background-attachment: fixed; /* Opcional: para que la imagen se quede fija al hacer scroll */
+    height: 100%;
+}
+
+
+.container{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    margin: 0 auto;
+
+  
+   
+}
+
+/* ------------------- HEADER ------------------- */
+
+header{
+    width: 100%;
+    height: 100px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: start; 
+    align-items: center; 
+    
+}
+nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-size: 15px;
+    font-family: "Signika", sans-serif;
+    font-style: normal;
+    justify-content: space-evenly;
+  }
+  
+  nav * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+  }
+  
+  nav li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .2em 0.5em;
+    padding: 0;
+  }
+  
+  nav a {
+    padding: .4em .8em;
+    color: rgb(0, 0, 0);
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  nav a::before,
+  nav a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+  nav a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #3E8914;
+    border-right: 3px solid #2E640F;
+    transform: translate(-100%, 50%);
+  }
+  
+  nav a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #2E640F;
+    border-left: 3px solid #3E8914;
+    transform: translate(100%, -50%)
+  }
+  
+  nav a:hover:before,
+  nav a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  nav a:hover {
+    color: #8EB22D;
+  }
+
+.logo-hoja{
+    padding-left: 30px;
+    width: 100%;
+}
+
+
+
+/* ------------------- MAIN ------------------- */
+/* .img-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 40px;
+    width: fit-content;
+   
+}
+.img-proemag{
+    max-width: 300px;
+}
+
+.img-productos{
+    max-width: 420px;
+    box-shadow: inset 0 0 30px #000;
+} */
+
+.img-inicio {
+    flex-direction: row;
+    display: flex;
+    max-width:90%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.img-proemag, .img-productos {
+    max-width: 90%;
+    padding: 0 auto;
+    margin: 0 auto;
+    box-shadow: inset 0 0 30px #000;
+}
+
+
+.sec-quienes-somos{
+    width: 95%;
+    margin:0 auto;
+}
+
+h2{
+    color: #8EB22D;
+    font-family: "Signika", sans-serif;
+    font-weight: 400;
+   
+    padding: 10px 0 20px 50px;
+    font-size: 24px;
+    margin: 0;
+}
+hr{
+    width: 95%;
+    color: #000;
+    margin: 20px auto;
+}
+aside{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 10px;
+}
+.div-fotos-inicio{
+    width: 231px; /* Ancho del contenedor */
+ aspect-ratio: 1/1; /* Proporción 1:1 */
+    overflow: hidden; /* Para recortar la imagen fuera del círculo */
+    border-radius: 50%; /* Hace que el contenedor tenga forma de círculo */
+    display: flex; /* Para centrar la imagen */
+    justify-content: center; /* Para centrar la imagen */
+    align-items: center; /* Para centrar la imagen */
+    border: 2px solid black; /* Borde negro alrededor del círculo */
+}
+.img-verduras{
+    width: 100%; /* Asegura que la imagen llene el contenedor */
+    height: 100%; /* Asegura que la imagen llene el contenedor */
+    object-fit: cover; /* Escala la imagen para que llene el contenedor sin perder su relación de aspecto */
+    display: block; /* Elimina cualquier espacio adicional debajo de la imagen */
+    transition: filter 1.2s ease; /* Transición suave para el cambio de brillo */
+    
+}
+.img-verduras:hover {
+
+    opacity: 0.7;
+  }
+
+  /* -------------------Footer---------------------*/
+  .container-footer{
+    background-color: #FFC802;
+    display: flex;
+    padding: 14px 0;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 50%;
+    margin: 20px auto;
+
+}
+.social-icon{
+   margin-left: 300px;
+   width: 100px;
+}
+
+
+
+.footer-p{
+    font-size:14px ;
+    padding-left: 30px;
+}
+
+
+/*---------Pagina Sevicios------------------*/
+.p-servicios{
+    padding-left: 8px;
+    width: 90%;
+    margin:0 auto;
+}
+
+.ficha-tecnica-img{
+    width: 220px;
+    padding: 20px 0 10px 55px;
+}
+.slider {
+    position: relative;
+    width:95%;
+    max-width: 1200px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    padding-bottom: 30px;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slider input {
+    display: none;
+}
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+.navigation {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 10px;
+}
+.navigation label {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+}
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"] {
+    background: #FFC802;
+}
+
+/*---------Pagina Clientes---------------------*/
+.section-clientes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    margin:0 auto;
+}
+
+
+.section-clientes ul{
+    list-style:square;
+    padding: 20px;
+    margin: 0;
+}
+
+.clientes_grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    padding:3px;
+    gap: 2px;
+    width: 100%;
+   
+}
+ .logo_sodexo, .logo_enap ,.logo_ejercito{
+    width:200px;
+}
+.logo_clinica{
+    width: 120px;
+}
+
+/*--------Form pagina visitanos------------------*/
+
+.visitanos-h2{
+    padding-left: 60px;
+    padding-top: 20px;
+    font-size: 24px;
+    margin: 0;
+    
+}
+.visitanos-container{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 30px; 
+    padding:0;
+    margin-bottom: 30px;
+}
+
+.ubicacion{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100px;
+}
+
+.ubicacion__container__tituto{
+    padding:0 30px;
+}
+
+.ubicacion__container__direccion{
+    padding-left: 49px;
+    padding-top: 150px;
+}
+
+.ubicacion__titulo{
+    padding: 0;
+    margin-bottom: 30px;
+}
+.ubicacion__text{
+    font-size: 17px;
+}
+
+.ubicacion__parrafo{
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+.form{
+   margin: 0px auto;
+   padding: 0 1.5rem;
+   width: min(550px, 90%);
+   border-radius: 10px;
+   background-color: #ffffff;
+}
+
+
+.form_inputs{
+    margin: 2rem 0 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    color:#6b6b6b;
+}
+
+.form__label{
+   width: 100%;
+   display: grid;
+   grid-template-areas: "input";
+   color:#6b6b6b;
+}
+
+.form__input{
+    grid-area: input;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #f7f0f0;
+    padding: 1rem 1.5rem;
+    color:#6b6b6b;
+}
+.form__text{
+    grid-area: input;
+    z-index: 100;
+    width: max-content;
+    height: 100%;
+    margin-left: 1rem;
+    padding: 0 .5rem;
+    display: flex;
+    align-items: center;
+    transform-origin: left center;
+    transition: transform .3s;
+}
+
+.form__input:focus + .form__text ,
+.form__input:not(:placeholder-shown) + .form__text{
+    background-color: rgb(255, 255, 255);
+height: 39px;
+    transform: translateY(-30%) scale(.6);
+}
+
+
+input, textarea{
+    display: block;
+    width: 90%;
+    height: 30px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Signika", sans-serif;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+input:valid, textarea:valid {
+    border-color: green;
+}
+
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+textarea{
+    height: 184px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .gracias_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0  ;
+    margin: 0 auto;
+    width: 90%;
+height: 20vh;
+    border-radius: 10px;
+    font-size: 22px;
+  }
+
+  .img-proemag-gracias{
+    max-width: 300px;
+   display: flex;
+    margin: 0 auto;
+    padding-top: 20px;
+  
+  }
+
+/* Estilos CSS para el mapa */
+.map-container {
+    width: 90%;
+    height: 400px; /* Ajusta la altura según sea necesario */
+    margin: 0 auto; /* Centra el mapa horizontalmente */
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Elimina el borde predeterminado */
+}
+
+
+
+/* ------------------- GALERIA DE IMAGEMES ------------------- */
+.container_galeria {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px auto;
+ 
+}
+
+.galeria-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    height: 30vh;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+
+/* ------------------- MEDIAS QUERIES  ------------------- */
+@media (min-width: 1368px) and (max-width: 1440px) {
+
+    .container {
+        width: 70%;
+    }
+ 
+    .img-inicio {
+        flex-direction: row;
+        display: flex;
+        max-width:90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-proemag, .img-productos {
+        max-width: 90%;
+        padding: 0 auto;
+        margin: 0 auto;
+    }
+    .container-footer {
+        width: 70%;
+    
+      
+    }
+
+    .clientes_grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        place-items: center;
+        padding:2px;
+        gap: 10px;
+        width: 100%;
+       
+    }
+     .logo_sodexo, .logo_enap ,.logo_ejercito{
+        width:200px;
+    }
+    .logo_clinica{
+        width: 120px;
+    }
+    
+}
+@media (min-width: 1028px) and (max-width: 1368px) {
+    .container {
+        width: 80%;
+    
+    }
+   .hamburger{
+    display: none;
+   }
+
+   .clientes_grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    padding:2px;
+    gap: 10px;
+    width: 100%;
+   
+}
+ .logo_sodexo, .logo_enap ,.logo_ejercito{
+    width:200px;
+}
+.logo_clinica{
+    width: 120px;
+}
+
+
+
+    .img-inicio {
+        flex-direction: row;
+        display: flex;
+        max-width:90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-proemag, .img-productos {
+        max-width: 80%;
+        padding: 0 auto;
+        margin: 0 auto;
+    }
+    .container-footer {
+        width: 80%;
+    
+      
+    }
+    .social-icon {
+        width: 100px;
+         margin: 0;
+         }
+}
+
+/* Media Queries para Tablets */
+@media (min-width: 530px) and (max-width: 1028px){
+    .container {
+        width: 90%;
+    
+    }
+   .hamburger{
+    display: none;
+   }
+
+
+   .clientes_grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    padding:2px;
+    gap: 10px;
+    width: 100%;
+   
+}
+ .logo_sodexo, .logo_enap ,.logo_ejercito{
+    width:200px;
+}
+.logo_clinica{
+    width: 100px;
+}
+
+    .img-inicio {
+        flex-direction: row;
+        display: flex;
+        max-width:90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-proemag, .img-productos {
+        max-width: 80%;
+        padding: 0 auto;
+        margin: 0 auto;
+    }
+
+    .div-fotos-inicio {
+        
+        width: 20vw; /* Ancho del contenedor relativo al viewport width */
+        max-width: 300px; /* Ancho máximo */
+        min-width: 140px; /* Ancho mínimo */
+        height: 20vw; /* Alto del contenedor relativo al viewport width para mantener la proporción */
+        max-height: 300px; /* Alto máximo */
+        min-height: 140px; /* Alto mínimo */
+        overflow: hidden; /* Para recortar la imagen fuera del círculo */
+        border-radius: 50%; /* Hace que el contenedor tenga forma de círculo */
+        display: flex; /* Para centrar la imagen */
+        justify-content: center; /* Para centrar la imagen */
+        align-items: center; /* Para centrar la imagen */
+        border: 2px solid black; /* Borde negro alrededor del círculo */
+        padding: 0;
+      }
+
+      .div-fotos-inicio img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Mantiene la proporción de la imagen y recorta el exceso */
+        border-radius: 50%; /* Hace que la imagen también tenga forma de círculo */
+    }
+      .container-footer {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+      
+    }
+    .footer-p{
+       
+       font-size: 13px;
+    }
+    .social-icon {
+   width: 100px;
+    margin: 0;
+    }
+
+
+}
+
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 530px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin: 0.5em 1em;
+    }
+
+
+    .slider {
+        position: relative;
+        width:90%;
+        max-width: 1200px;
+        margin: 20px;
+        overflow: hidden;
+        padding-top: 20px;
+        border-radius: 5px;
+        padding-bottom: 30px;
+    }
+    .h2_titulo{
+        text-align: center;
+    
+    }
+.ubicacion__container__direccion{
+   padding: 0 30px;
+   text-align: start;
+}
+.ubicacion__parrafo{
+    padding:0;
+    text-align: start;
+    margin:0;
+    padding-bottom: 10px;
+    
+}
+.ubicacion__titulo{
+    display: none;
+}
+
+.ubicacion__text{
+    font-size: 15px;
+}
+.form{
+    margin-top: 90px;
+}
+    .social-icon {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-p {
+        text-align: center;
+        padding: 10px auto;
+        font-size: 11px;
+    }
+
+    .clientes_grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        place-items: center;
+        padding:2px;
+        gap: 10px;
+       
+    }
+     .logo_sodexo, .logo_enap ,.logo_ejercito{
+        width: 150px;
+    }
+    .logo_clinica{
+        width: 100px;
+    }
+    .section-clientes ul {
+        padding: 10px;
+    }
+
+    .visitanos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ubicacion {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .map-container {
+        width: 100%;
+    }
+
+
+  .div-fotos-inicio {
+    width: 100px; /* Ancho del contenedor */
+    height: 100px; /* Alto del contenedor */
+    overflow: hidden; /* Para recortar la imagen fuera del círculo */
+    border-radius: 50%; /* Hace que el contenedor tenga forma de círculo */
+    display: flex; /* Para centrar la imagen */
+    justify-content:space-evenly; /* Para centrar la imagen */
+    align-items: center; /* Para centrar la imagen */
+    border: 2px solid black; /* Borde negro alrededor del círculo */
+  }
+    .img-inicio {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 90%;
+    }
+
+    .img-proemag, .img-productos {
+        max-width: 100%;
+        padding: 0 auto;
+    }
+
+    .sec-quienes-somos {
+        width: 100%;
+        padding: 0 auto;
+        text-align: center;
+    }
+
+    .logo-hoja{
+        padding-left: 260px;
+        padding-top: 8px
+    }
+    h2 {
+    font-size: 20px;
+     padding: 10px 0;
+     margin: 0 auto;
+    }
+   p {
+    width: 90%;
+    text-align:start;
+    margin: 0 auto;
+  
+    font-size: 15px;
+   }
+  
+   ul ,li{
+    width: 80%;
+   align-self:center;
+   margin: 0 auto;
+  
+   }
+    .container-footer {
+        width: 90%;
+    }
+    
+    .ubicacion__container__direccion{
+        padding: 0 30px;
+        text-align: start;
+     }
+     .ubicacion__parrafo{
+         padding:0;
+         text-align: start;
+         margin:0;
+         padding-bottom: 10px;
+         
+     }
+     .ubicacion__titulo{
+         display: none;
+     }
+     
+     .ubicacion__text{
+         font-size: 15px;
+     }
+     .form{
+         margin-top: 90px;
+     }
+         .social-icon {
+             margin-left: 0;
+             text-align: center;
+             width: 100%;
+         }
+     
+         .footer-p {
+            text-align:center;
+             padding: 10px auto;
+             font-size: 13px;
+         }
+     
+         .section-clientes {
+             flex-direction: column;
+             align-items: center;
+             width: 100%;
+         }
+     
+         .section-clientes ul {
+             padding: 10px;
+         }
+     
+         .visitanos-container {
+             flex-direction: column;
+             align-items: center;
+         }
+     
+         .ubicacion {
+             width: 100%;
+             text-align: center;
+         }
+     
+         .form {
+             width: 100%;
+             padding: 20px;
+         }
+     
+         .map-container {
+             width: 100%;
+         }
+            /* Estilos específicos para el menú lateral */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 200;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    display: block;
+}
+
+/* Estilos para el botón de hamburguesa */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    z-index: 1000;
+    color: #8EB22D;
+}
+
+
+
+    }
+
+
+ 
+
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Mostrar el menú cuando está activo */
+.sidebar.active {
+    left: 0;
+}
