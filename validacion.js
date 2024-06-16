@@ -1,9 +1,9 @@
 console.log('Archivo JavaScript cargado correctamente');
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM completamente cargado y analizado');
-    
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
+
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevenir el envío del formulario
         const nombre = document.getElementById('name');
         const email = document.getElementById('email');
@@ -46,18 +46,19 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             errorMessage.style.display = 'none';
             // Aquí podrías enviar el formulario si todo es válido
-            alert('Formulario enviado correctamente!');
-            // document.getElementById('contactForm').submit(); // Descomenta esta línea para enviar el formulario
+            document.getElementById('contactForm').submit(); // Descomenta esta línea para enviar el formulario
         }
     });
 
     // CSS adicional para resaltar los campos inválidos
     const style = document.createElement('style');
-    if ('invalid'){  style.innerHTML = `
+    if ('invalid') {
+        style.innerHTML = `
         .invalid {
             border-color: red !important;
         }
-    `;}
-  
+    `;
+    }
+
     document.head.appendChild(style);
 });
