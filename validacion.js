@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             errorMessage.style.display = 'none';
             // Aquí podrías enviar el formulario si todo es válido
-            document.getElementById('contactForm').submit(); // Descomenta esta línea para enviar el formulario
+            document.getElementById('contactForm').submit(); 
         }
     });
 
